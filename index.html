@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exam Management System</h1>
+
+    <section id="file-uploads">
+        <h2>Upload Files</h2>
+        <input type="file" id="invigilatorsFile" accept=".xlsx">
+        <input type="file" id="datesTimesFile" accept=".xlsx">
+        <input type="file" id="classroomsFile" accept=".xlsx">
+        <input type="file" id="studentsFile" accept=".xlsx">
+    </section>
+
+    <section id="manual-inputs">
+        <h2>Manual Inputs</h2>
+        <label for="examName">Exam Name:</label>
+        <input type="text" id="examName"><br>
+
+        <label for="sectionsToAdd">Sections to Add (comma-separated):</label>
+        <input type="text" id="sectionsToAdd"><br>
+
+        <button id="generateTimetable">Generate Timetable & Seating Arrangement</button>
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <div id="timetableDisplay"></div>
+        <button id="downloadPdf">Download as PDF</button>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
